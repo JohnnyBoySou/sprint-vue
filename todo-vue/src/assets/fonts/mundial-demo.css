@@ -1,0 +1,65 @@
+/* Demonstração da fonte Mundial */
+
+/* Títulos principais */
+.hero-title {
+  font-family: 'Mundial', sans-serif;
+  font-weight: 900; /* Black */
+  letter-spacing: -0.02em;
+}
+
+/* Subtítulos */
+.hero-subtitle {
+  font-family: 'Mundial', sans-serif;
+  font-weight: 700; /* Bold */
+  letter-spacing: -0.01em;
+}
+
+/* Texto de descrição */
+.hero-description {
+  font-family: 'Mundial', sans-serif;
+  font-weight: 400; /* Regular */
+  line-height: 1.6;
+}
+
+/* Títulos de seção */
+.section-title {
+  font-family: 'Mundial', sans-serif;
+  font-weight: 700; /* Bold */
+  letter-spacing: -0.01em;
+}
+
+/* Cards de features */
+.feature-card h3 {
+  font-family: 'Mundial', sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+.feature-card p {
+  font-family: 'Mundial', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+/* Botões */
+.q-btn {
+  font-family: 'Mundial', sans-serif;
+  font-weight: 600; /* Usa Regular como fallback */
+  letter-spacing: 0.01em;
+}
+
+/* Headers do Quasar */
+.q-toolbar-title {
+  font-family: 'Mundial', sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+/* Texto do corpo */
+body, p, span, div {
+  font-family: 'Mundial', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+/* Classes específicas para a fonte Mundial */
+.mundial-light { font-family: 'Mundial', sans-serif; font-weight: 300; }
+.mundial-regular { font-family: 'Mundial', sans-serif; font-weight: 400; }
+.mundial-bold { font-family: 'Mundial', sans-serif; font-weight: 700; }
+.mundial-black { font-family: 'Mundial', sans-serif; font-weight: 900; }

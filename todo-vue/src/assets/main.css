@@ -1,0 +1,141 @@
+@import './base.css';
+@import './fonts/fonts.css';
+@import './fonts/mundial-demo.css';
+
+/* Aplicar cores de tema do Quasar */
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#app {
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+/* ===== SCROLLBAR GLOBAL CUSTOMIZADA ===== */
+
+/* Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--q-color-grey-4);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--q-color-grey-5);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--q-color-grey-6);
+}
+
+/* Scrollbar para elementos específicos com scroll */
+.q-scrollarea__container::-webkit-scrollbar,
+.q-scrollarea__content::-webkit-scrollbar,
+.q-page::-webkit-scrollbar,
+.q-drawer::-webkit-scrollbar,
+.q-card::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.q-scrollarea__container::-webkit-scrollbar-track,
+.q-scrollarea__content::-webkit-scrollbar-track,
+.q-page::-webkit-scrollbar-track,
+.q-drawer::-webkit-scrollbar-track,
+.q-card::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.q-scrollarea__container::-webkit-scrollbar-thumb,
+.q-scrollarea__content::-webkit-scrollbar-thumb,
+.q-page::-webkit-scrollbar-thumb,
+.q-drawer::-webkit-scrollbar-thumb,
+.q-card::-webkit-scrollbar-thumb {
+  background: var(--q-color-grey-4);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.q-scrollarea__container::-webkit-scrollbar-thumb:hover,
+.q-scrollarea__content::-webkit-scrollbar-thumb:hover,
+.q-page::-webkit-scrollbar-thumb:hover,
+.q-drawer::-webkit-scrollbar-thumb:hover,
+.q-card::-webkit-scrollbar-thumb:hover {
+  background: var(--q-color-grey-5);
+}
+
+.q-scrollarea__container::-webkit-scrollbar-thumb:active,
+.q-scrollarea__content::-webkit-scrollbar-thumb:active,
+.q-page::-webkit-scrollbar-thumb:active,
+.q-drawer::-webkit-scrollbar-thumb:active,
+.q-card::-webkit-scrollbar-thumb:active {
+  background: var(--q-color-grey-6);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--q-color-grey-4) transparent;
+}
+
+/* Scrollbar para modais e overlays */
+.q-dialog .q-card::-webkit-scrollbar,
+.q-menu::-webkit-scrollbar,
+.q-popup::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.q-dialog .q-card::-webkit-scrollbar-track,
+.q-menu::-webkit-scrollbar-track,
+.q-popup::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.q-dialog .q-card::-webkit-scrollbar-thumb,
+.q-menu::-webkit-scrollbar-thumb,
+.q-popup::-webkit-scrollbar-thumb {
+  background: var(--q-color-grey-4);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.q-dialog .q-card::-webkit-scrollbar-thumb:hover,
+.q-menu::-webkit-scrollbar-thumb:hover,
+.q-popup::-webkit-scrollbar-thumb:hover {
+  background: var(--q-color-grey-5);
+}
+
+.q-dialog .q-card::-webkit-scrollbar-thumb:active,
+.q-menu::-webkit-scrollbar-thumb:active,
+.q-popup::-webkit-scrollbar-thumb:active {
+  background: var(--q-color-grey-6);
+}
