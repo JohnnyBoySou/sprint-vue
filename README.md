@@ -227,8 +227,8 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 **Seu Nome**
 
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
-- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/seu-perfil)
+- GitHub: [@JohnnyBoySou](https://github.com/JohnnyBoySou/o)
+- LinkedIn: [João Sousa](https://www.linkedin.com/in/jo%C3%A3o-sousa-8441321aa/)
 
 ---
 
