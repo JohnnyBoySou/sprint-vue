@@ -1,64 +1,238 @@
-# todo-vue
+# 🚀 Sprint Board - Todo Vue
 
-This template should help get you started developing with Vue 3 in Vite.
+<div align="center">
+  <img src="https://img.shields.io/badge/Vue.js-3.5.18-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue.js" />
+  <img src="https://img.shields.io/badge/TypeScript-5.8.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Quasar-2.18.2-1976D2?style=for-the-badge&logo=quasar&logoColor=white" alt="Quasar" />
+  <img src="https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+</div>
 
-## Recommended IDE Setup
+<br>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+<div align="center">
+  <h3>📋 Uma ferramenta completa para gerenciamento de projetos ágeis</h3>
+  <p>Gerencie suas tarefas e sprints de forma eficiente com boards visuais, acompanhamento de progresso e analytics detalhadas.</p>
+</div>
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## ✨ Funcionalidades
 
-## Customize configuration
+### 🎯 **Gestão de Boards**
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Criação e edição de boards para diferentes projetos
+- Organização visual com drag-and-drop intuitivo
+- Status de boards (ativo/finalizado)
 
-## Project Setup
+### 📝 **Sistema de Tarefas**
 
-```sh
+- Criação e edição de tarefas com descrições detalhadas
+- Atribuição de story points e responsáveis
+- Definição de datas de vencimento
+- Status: Backlog → Sprint → Em Progresso → Testando → Concluído
+
+### 📊 **Analytics Avançadas**
+
+- Métricas de produtividade em tempo real
+- Distribuição de tarefas por status
+- Taxa de conclusão e eficiência
+- Exportação de dados para análise
+
+### 🎨 **Interface Moderna**
+
+- Design responsivo e intuitivo
+- Tema claro/escuro
+- Componentes visuais atrativos
+- Atalhos de teclado para produtividade
+
+### 🔧 **Recursos Técnicos**
+
+- Persistência local com localStorage
+- Gerenciamento de estado com Pinia
+- Roteamento com Vue Router
+- Testes unitários e E2E
+
+---
+
+## 🛠️ Tecnologias
+
+### **Frontend**
+
+- **[Vue.js 3.5.18](https://vuejs.org/)** - Framework JavaScript reativo
+- **[TypeScript 5.8.0](https://www.typescriptlang.org/)** - Tipagem estática
+- **[Quasar 2.18.2](https://quasar.dev/)** - Framework de componentes
+- **[Vite](https://vitejs.dev/)** - Build tool e dev server
+- **[Vue Router 4.5.1](https://router.vuejs.org/)** - Roteamento
+- **[Pinia 3.0.3](https://pinia.vuejs.org/)** - Gerenciamento de estado
+
+### **Desenvolvimento**
+
+- **[Vitest 3.2.4](https://vitest.dev/)** - Testes unitários
+- **[Playwright 1.54.1](https://playwright.dev/)** - Testes E2E
+- **[ESLint 9.31.0](https://eslint.org/)** - Linting
+- **[Prettier 3.6.2](https://prettier.io/)** - Formatação de código
+- **[Sass 1.92.1](https://sass-lang.com/)** - Pré-processador CSS
+
+### **Utilitários**
+
+- **[UUID 13.0.0](https://www.npmjs.com/package/uuid)** - Geração de IDs únicos
+- **[VueDraggable 4.1.0](https://github.com/SortableJS/vue.draggable.next)** - Drag and drop
+
+---
+
+## 🚀 Instalação e Uso
+
+### **Pré-requisitos**
+
+- Node.js 20.19.0+ ou 22.12.0+
+- npm ou yarn
+
+### **Instalação**
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/todo-vue.git
+
+# Entre no diretório
+cd todo-vue
+
+# Instale as dependências
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### **Desenvolvimento**
 
-```sh
+```bash
+# Inicie o servidor de desenvolvimento
 npm run dev
+
+# Acesse http://localhost:5173
 ```
 
-### Type-Check, Compile and Minify for Production
+### **Build para Produção**
 
-```sh
+```bash
+# Gere o build otimizado
 npm run build
+
+# Visualize o build localmente
+npm run preview
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+---
 
-```sh
+## 🧪 Testes
+
+### **Testes Unitários**
+
+```bash
+# Execute os testes unitários
 npm run test:unit
+
+# Execute em modo watch
+npm run test:unit -- --watch
 ```
 
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
+### **Testes E2E**
 
-```sh
-# Install browsers for the first run
+```bash
+# Instale os browsers do Playwright (primeira vez)
 npx playwright install
 
-# When testing on CI, must build the project first
-npm run build
-
-# Runs the end-to-end tests
+# Execute os testes E2E
 npm run test:e2e
-# Runs the tests only on Chromium
+
+# Execute apenas no Chromium
 npm run test:e2e -- --project=chromium
-# Runs the tests of a specific file
-npm run test:e2e -- tests/example.spec.ts
-# Runs the tests in debug mode
+
+# Execute em modo debug
 npm run test:e2e -- --debug
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+---
 
-```sh
-npm run lint
+## 🔧 Scripts Disponíveis
+
+| Script              | Descrição                            |
+| ------------------- | ------------------------------------ |
+| `npm run dev`       | Inicia o servidor de desenvolvimento |
+| `npm run build`     | Gera build de produção               |
+| `npm run preview`   | Visualiza o build localmente         |
+| `npm run test:unit` | Executa testes unitários             |
+| `npm run test:e2e`  | Executa testes E2E                   |
+| `npm run lint`      | Executa linting no código            |
+| `npm run format`    | Formata o código com Prettier        |
+
+---
+
+## 📱 Atalhos de Teclado
+
+| Atalho     | Ação        |
+| ---------- | ----------- |
+| `Ctrl + N` | Nova tarefa |
+| `Ctrl + B` | Novo board  |
+
+---
+
+## 🎯 Como Usar
+
+1. **Crie um Board**: Comece criando um board para seu projeto
+2. **Adicione Tarefas**: Organize suas tarefas com descrições, story points e responsáveis
+3. **Gerencie o Fluxo**: Mova tarefas entre os status usando drag-and-drop
+4. **Acompanhe o Progresso**: Use a página de Analytics para métricas detalhadas
+5. **Exporte Dados**: Baixe relatórios em JSON para análise externa
+
+---
+
+## 🏗️ Estrutura do Projeto
+
 ```
+src/
+├── components/          # Componentes reutilizáveis
+│   ├── BoardView.vue   # Visualização do board Kanban
+│   ├── TaskAddModal.vue # Modal para adicionar tarefas
+│   ├── BoardAddModal.vue # Modal para adicionar boards
+│   └── ...
+├── stores/             # Gerenciamento de estado (Pinia)
+│   ├── boards.ts       # Store dos boards
+│   ├── tasks.ts        # Store das tarefas
+│   └── theme.ts        # Store do tema
+├── views/              # Páginas da aplicação
+│   ├── Home.vue        # Página inicial
+│   ├── Board.vue       # Página do board
+│   └── Analytics.vue   # Página de analytics
+├── router/             # Configuração de rotas
+└── assets/             # Recursos estáticos
+```
+
+---
+
+## 🤝 Contribuindo
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 👨‍💻 Autor
+
+**Seu Nome**
+
+- GitHub: [@seu-usuario](https://github.com/seu-usuario)
+- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/seu-perfil)
+
+---
+
+<div align="center">
+  <p>Feito com ❤️ usando Vue.js e Quasar</p>
+  <p>⭐ Se este projeto te ajudou, considere dar uma estrela!</p>
+</div>
