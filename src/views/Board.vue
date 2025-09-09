@@ -28,7 +28,7 @@ const sidebarCollapsed = ref(false)
 
 const hasBoards = computed(() => boardsStore.boards.length > 0)
 const hasTasks = computed(() => tasksStore.totalTasks > 0)
-const drawerWidth = computed(() => sidebarCollapsed.value ? 60 : 280)
+const drawerWidth = computed(() => (sidebarCollapsed.value ? 90 : 242))
 
 function openNewTaskDialog() {
   showTaskDialog.value = true
@@ -52,20 +52,20 @@ function openAnalytics() {
     router.push(`/analytics?boardId=${boardsStore.boards[0].id}`)
     return
   }
-  
+
   $q.dialog({
     title: 'Selecionar Board para Analytics',
     message: 'Escolha qual board você deseja analisar:',
     options: {
       type: 'radio',
       model: boardsStore.boards[0]?.id.toString(),
-      items: boardsStore.boards.map(board => ({
+      items: boardsStore.boards.map((board) => ({
         label: board.name,
-        value: board.id.toString()
-      }))
+        value: board.id.toString(),
+      })),
     },
     cancel: true,
-    persistent: true
+    persistent: true,
   }).onOk((boardId) => {
     router.push(`/analytics?boardId=${boardId}`)
   })
@@ -95,7 +95,7 @@ onMounted(() => {
   setTimeout(() => {
     isLoading.value = false
   }, 1000)
-  
+
   // Adicionar listener de teclado
   document.addEventListener('keydown', handleKeydown)
 })
@@ -115,13 +115,13 @@ onUnmounted(() => {
       :width="drawerWidth"
       :breakpoint="400"
     >
-      <Sidebar 
-        @new-board="openNewBoardDialog" 
+      <Sidebar
+        @new-board="openNewBoardDialog"
         @edit-board="openEditBoardDialog"
         @toggle="handleSidebarToggle"
       />
     </q-drawer>
-    
+
     <q-page-container>
       <q-page padding>
         <LoadingState v-if="isLoading" />
@@ -143,31 +143,18 @@ onUnmounted(() => {
             </div>
           </div>
 
-          <EmptyBoardsState 
-            v-if="!hasBoards" 
-            @create-board="openNewBoardDialog"
-          />
+          <EmptyBoardsState v-if="!hasBoards" @create-board="openNewBoardDialog" />
 
-          <EmptyTasksState 
-            v-else-if="hasBoards && !hasTasks" 
-            @create-task="openNewTaskDialog"
-          />
+          <EmptyTasksState v-else-if="hasBoards && !hasTasks" @create-task="openNewTaskDialog" />
 
           <KanbanBoard v-if="hasBoards" />
         </div>
 
-        <TaskAddModal 
-          v-model="showTaskDialog" 
-        />
+        <TaskAddModal v-model="showTaskDialog" />
 
-        <BoardAddModal 
-          v-model="showBoardDialog" 
-        />
+        <BoardAddModal v-model="showBoardDialog" />
 
-        <BoardEditModal 
-          v-model="showBoardEditDialog"
-          :board="selectedBoardForEdit"
-        />
+        <BoardEditModal v-model="showBoardEditDialog" :board="selectedBoardForEdit" />
 
         <div v-if="hasBoards" class="keyboard-shortcuts">
           <q-tooltip anchor="top left" self="top right">
@@ -176,13 +163,7 @@ onUnmounted(() => {
               <div class="shortcut-hint">Ctrl+B - Novo Board</div>
             </div>
           </q-tooltip>
-          <q-btn 
-            round 
-            color="grey-6" 
-            icon="keyboard" 
-            size="sm"
-            flat
-          />
+          <q-btn round color="grey-6" icon="keyboard" size="sm" flat />
         </div>
       </q-page>
     </q-page-container>
@@ -245,11 +226,11 @@ onUnmounted(() => {
     gap: 16px;
     align-items: stretch;
   }
-  
+
   .header-actions {
     justify-content: center;
   }
-  
+
   .keyboard-shortcuts {
     bottom: 10px;
     right: 10px;
@@ -260,7 +241,7 @@ onUnmounted(() => {
   .home-header {
     padding: 12px 0;
   }
-  
+
   .header-title h1 {
     font-size: 1.5rem;
   }

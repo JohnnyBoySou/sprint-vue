@@ -10,47 +10,29 @@ function goToBoards() {
 
 <template>
   <div class="landing-page">
-    <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="hero-title">
-            <q-icon name="dashboard" class="q-mr-md" color="primary" size="48px" />
-            Sprint Board
-          </h1>
+          <h1 class="hero-title">Sprint Board</h1>
           <p class="hero-subtitle">
             Gerencie suas tarefas e sprints de forma eficiente e organizada
           </p>
           <p class="hero-description">
-            Uma ferramenta completa para gerenciamento de projetos ágeis, 
-            com boards visuais, acompanhamento de progresso e analytics detalhadas.
+            Uma ferramenta completa para gerenciamento de projetos ágeis, com boards visuais,
+            acompanhamento de progresso e analytics detalhadas.
           </p>
           <div class="hero-actions">
-            <q-btn 
-              color="primary" 
-              size="lg"
-              label="Começar Agora" 
+            <q-btn
+              color="primary"
+              label="Começar Agora"
               @click="goToBoards"
-              icon="rocket_launch"
               class="q-px-xl q-py-md"
             />
-            <q-btn 
-              color="secondary" 
-              size="lg"
-              label="Saiba Mais" 
-              icon="info"
-              outline
-              class="q-px-xl q-py-md q-ml-md"
-            />
           </div>
-        </div>
-        <div class="hero-image">
-          <q-icon name="dashboard" size="200px" color="primary" opacity="0.1" />
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
     <section class="features-section">
       <div class="container">
         <h2 class="section-title">Recursos Principais</h2>
@@ -63,33 +45,17 @@ function goToBoards() {
           <div class="feature-card">
             <q-icon name="analytics" size="48px" color="primary" class="q-mb-md" />
             <h3>Analytics Detalhadas</h3>
-            <p>Acompanhe o progresso com métricas e relatórios em tempo real</p>
+            <p>Acompanhe o progresso com métricas</p>
           </div>
           <div class="feature-card">
             <q-icon name="speed" size="48px" color="primary" class="q-mb-md" />
             <h3>Gestão de Sprints</h3>
-            <p>Planeje e execute sprints de forma eficiente e organizada</p>
-          </div>
-          <div class="feature-card">
-            <q-icon name="group" size="48px" color="primary" class="q-mb-md" />
-            <h3>Colaboração</h3>
-            <p>Trabalhe em equipe com atribuição de tarefas e acompanhamento</p>
-          </div>
-          <div class="feature-card">
-            <q-icon name="notifications" size="48px" color="primary" class="q-mb-md" />
-            <h3>Notificações</h3>
-            <p>Mantenha-se atualizado com alertas e lembretes automáticos</p>
-          </div>
-          <div class="feature-card">
-            <q-icon name="cloud_sync" size="48px" color="primary" class="q-mb-md" />
-            <h3>Sincronização</h3>
-            <p>Seus dados são salvos automaticamente e sincronizados em tempo real</p>
+            <p>Planeje e execute sprints de forma organizada</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How it Works Section -->
     <section class="how-it-works-section">
       <div class="container">
         <h2 class="section-title">Como Funciona</h2>
@@ -119,23 +85,11 @@ function goToBoards() {
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <footer class="footer">
       <div class="container">
-        <div class="cta-content">
-          <h2>Pronto para começar?</h2>
-          <p>Transforme a forma como você gerencia projetos e sprints</p>
-          <q-btn 
-            color="primary" 
-            size="xl"
-            label="Acessar Sprint Board" 
-            @click="goToBoards"
-            icon="rocket_launch"
-            class="q-px-xl q-py-lg"
-          />
-        </div>
+        <p>© 2025 Sprint Board. Todos os direitos reservados.</p>
       </div>
-    </section>
+    </footer>
   </div>
 </template>
 
@@ -143,7 +97,7 @@ function goToBoards() {
 .landing-page {
   min-height: 100vh;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .container {
@@ -152,9 +106,8 @@ function goToBoards() {
   padding: 0 20px;
 }
 
-/* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--q-color-primary);
   color: white;
   padding: 80px 0;
   min-height: 70vh;
@@ -163,11 +116,9 @@ function goToBoards() {
 }
 
 .hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -175,29 +126,34 @@ function goToBoards() {
 .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
-  margin: 0 0 20px 0;
-  display: flex;
+  color: white;
+  text-align: center;
   align-items: center;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   font-weight: 500;
+  color: white;
   margin: 0 0 20px 0;
   opacity: 0.9;
+  text-align: center;
 }
 
 .hero-description {
   font-size: 1.1rem;
   line-height: 1.6;
+  color: white;
   margin: 0 0 40px 0;
   opacity: 0.8;
+  text-align: center;
 }
 
 .hero-actions {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-image {
@@ -232,7 +188,9 @@ function goToBoards() {
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
@@ -273,7 +231,7 @@ function goToBoards() {
 }
 
 .step-number {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #000;
   color: white;
   width: 60px;
   height: 60px;
@@ -319,6 +277,13 @@ function goToBoards() {
   opacity: 0.9;
 }
 
+.footer {
+  background: #000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-content {
@@ -326,34 +291,34 @@ function goToBoards() {
     gap: 40px;
     text-align: center;
   }
-  
+
   .hero-title {
     font-size: 2.5rem;
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .hero-actions {
     justify-content: center;
   }
-  
+
   .features-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .steps-container {
     grid-template-columns: 1fr;
   }
-  
+
   .step {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .cta-content h2 {
     font-size: 2rem;
   }
@@ -363,28 +328,28 @@ function goToBoards() {
   .hero-section {
     padding: 60px 0;
   }
-  
+
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
-  
+
   .hero-actions {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .feature-card {
     padding: 30px 20px;
   }
-  
+
   .step {
     gap: 15px;
   }
-  
+
   .step-number {
     width: 50px;
     height: 50px;
